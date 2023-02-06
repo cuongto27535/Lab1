@@ -9,7 +9,7 @@ const ProductItem = (props) => {
             <View style={styles.container}>
             <Image source={require('../../../assets/icon.png')} style={styles.picture}/>
             <View>
-                <Text>Tên : {item.name}</Text>
+                <Text>Tên abc: {item.name}</Text>
                 <Text>Mô tả : {item.note}</Text>
             </View>
             </View>
