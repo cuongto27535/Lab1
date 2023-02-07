@@ -1,15 +1,13 @@
 import {StyleSheet, Text, View,FlatList,Image } from 'react-native';
-
-
 const ProductItem = (props) => {
     const item = props.item;
     const image = item.image;
     return(
         <>  
             <View style={styles.container}>
-            <Image source={require('../../../assets/icon.png')} style={styles.picture}/>
+            <Image source={require('../../../assets/anh3.png')} style={styles.picture}/>
             <View>
-                <Text>Tên abc: {item.name}</Text>
+                <Text>Tên : {item.name}</Text>
                 <Text>Mô tả : {item.note}</Text>
             </View>
             </View>

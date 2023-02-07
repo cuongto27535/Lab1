@@ -6,31 +6,23 @@ import ProductList from './src/screen/ProductList';
 export default function App() {
     const [status,setStatus] = useState(false);
     const list =  [
-        {id:1,name:'Tên',note:'Mô tả',image:'../../../assets/icon.png'},
-        {id:2,name:'Tên',note:'Mô tả',image:'../../../assets/icon.png'},
-        {id:3,name:'Tên',note:'Mô tả',image:'../../../assets/icon.png'}
+        {id:1,name:'Cương',note:'sv',image:'../../../assets/anh3.png'},
+        {id:2,name:'Việt',note:'sv',image:'../../../assets/anh3.png'},
+        {id:3,name:'Trung',note:'sv',image:'../../../assets/anh3.png'}
             ];
   return (
     <View style={styles.container}>
         <View style={styles.head}>
-            <Text>Họ tên: Phạm Trường Giang</Text>
-            <Text>MSV: PH28126</Text>
+            <Text>Tên :Tô Lê Cương</Text>
+            <Text>MSV: PH27535</Text>
         </View>
-      <Button title='Thêm mới' style={styles.btnAdd} onPress={() =>setStatus(true)}/>
-      {
-                status 
-                ? 
-                <View style={styles.layoutAdd}>
+      <Button title='Thêm ' style={styles.btnAdd} onPress={() =>setStatus(true)}/>
+      { status ? 
+              <View style={styles.layoutAdd}>
+                    <TextInput style={styles.input}placeholder = 'Tên'/>
+                    <TextInput style={styles.input}placeholder = 'Mô tả'/>
                     <TextInput style={styles.input}
-                    placeholder = 'Tên'
-                    />
-                    <TextInput style={styles.input}
-                    placeholder = 'Mô tả'
-                    />
-                    <TextInput style={styles.input}
-                    placeholder = 'Link ảnh'
-                    />
-
+                    placeholder = 'Link ảnh'/>
                     <View style={styles.button}>
                         <Button title='Hủy' style={styles.buttonHuy} onPress={() =>setStatus(false)}/>
                         <Button title='Lưu'/>
@@ -56,39 +48,23 @@ const styles = StyleSheet.create({
     alignItems:'flex-start',
   },
   input: {
-    height: 30,
+    height: 40,
     marginTop:10,
-    borderWidth: 1,
+    borderWidth: 2,
     padding: 3,
     borderRadius:3,
   },
   btnAdd:{
-    maxWidth:50,
+    maxWidth:40,
     alignItems:'flex-end',
   },
-  layoutAdd:{
-    flex:0,
-    margin:10,
-    padding:5,
-    borderWidth:1,
-    borderColor:'black',
-    padding:10,
-    borderRadius:5,
-
-  },
+ 
   button:{
     flexDirection: 'row',
     marginTop:15,
     marginBottom:5,
   },
 
-  list: {
-    flex:0,
-    margin:30,
-    borderWidth:1,
-    borderColor:'black',
-    borderRadius:5,
-    padding:10,    
-  },
-  
+ 
+
 });
